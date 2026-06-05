@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Motors | Superdeportivos</title>
+    <link rel="stylesheet" href="/ExpoV/style.wilber.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">APEX<span>MOTORS</span></div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#video">Destacado</a></li>
+                <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#especificaciones">Specs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="carousel-section">
+        <div class="carousel-container">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+
+            <div class="slides-wrapper">
+                <div class="slide bg1">
+                    <div class="slide-content">
+                        <h1>Lamborghini <span>Aventador</span></h1>
+                        <p>Diseño geométrico agresivo y el rugido inconfundible de un motor V12 atmosférico de pura raza italiana.</p>
+                        <a href="#modelos" class="btn">Explorar</a>
+                    </div>
+                </div>
+                <div class="slide bg2">
+                    <div class="slide-content">
+                        <h1>Nissan <span>GT-R Nismo</span></h1>
+                        <p>Apodado "Godzilla". Una obra maestra de la ingeniería japonesa diseñada para destruir cronómetros en la pista.</p>
+                        <a href="#modelos" class="btn">Ver Más</a>
+                    </div>
+                </div>
+                <div class="slide bg3">
+                    <div class="slide-content">
+                        <h1>Audi <span>R8 V10</span></h1>
+                        <p>El balance perfecto entre el lujo cotidiano y el rendimiento salvaje de un superdeportivo con tracción Quattro.</p>
+                        <a href="#modelos" class="btn">Descubrir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-arrows">
+                <label for="slide3" class="arrow arrow-left slide1-arrow">&lt;</label>
+                <label for="slide2" class="arrow arrow-right slide1-arrow">&gt;</label>
+
+                <label for="slide1" class="arrow arrow-left slide2-arrow">&lt;</label>
+                <label for="slide3" class="arrow arrow-right slide2-arrow">&gt;</label>
+
+                <label for="slide2" class="arrow arrow-left slide3-arrow">&lt;</label>
+                <label for="slide1" class="arrow arrow-right slide3-arrow">&gt;</label>
+            </div>
+
+            <div class="nav-dots">
+                <label for="slide1" class="dot" id="dot1"></label>
+                <label for="slide2" class="dot" id="dot2"></label>
+                <label for="slide3" class="dot" id="dot3"></label>
+            </div>
+        </div>
+    </section>
+
+    <section id="video" class="video-section">
+        <div class="video-header">
+            <h2>Pura <span>Adrenalina</span> en Movimiento</h2>
+            <p>Siente la sinfonía y el diseño del hiperdeportivo definitivo en alta definición.</p>
+        </div>
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/t4rCxCev4hc?si=cinematic" 
+                title="Ferrari LaFerrari Cinematic" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <section id="modelos" class="gallery">
+        <h2>Nuestra <span>Colección</span></h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?q=80&w=800&auto=format&fit=crop" alt="Lamborghini Aventador">
+                </div>
+                <div class="card-info">
+                    <h3>Toro V12 SVJ</h3>
+                    <p>V12 Atmosférico | 770 CV</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1706606016654-e699b9cf9c5f?q=80&w=800&auto=format&fit=crop" alt="Nissan GT-R">
+                </div>
+                <div class="card-info">
+                    <h3>Godzilla R35</h3>
+                    <p>V6 Twin-Turbo | 600 CV</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=800&auto=format&fit=crop" alt="Phantom R8">
+                </div>
+                <div class="card-info">
+                    <h3>Phantom R8</h3>
+                    <p>V10 FSI | 620 CV</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=800&auto=format&fit=crop" alt="Supra">
+                </div>
+                <div class="card-info">
+                    <h3>Apex MK5</h3>
+                    <p>L6 Turbo | 382 CV</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=800&auto=format&fit=crop" alt="Porsche Turbo">
+                </div>
+                <div class="card-info">
+                    <h3>Aero 911</h3>
+                    <p>Flat-6 Twin-Turbo | 650 CV</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800&auto=format&fit=crop" alt="Corvette C8">
+                </div>
+                <div class="card-info">
+                    <h3>Vanguard C8</h3>
+                    <p>V8 Atmosférico | 495 CV</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="especificaciones" class="specs-section">
+        <h2>Comparativa de <span>Potencia</span></h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Auto</th>
+                        <th>Modelo</th>
+                        <th>Motor</th>
+                        <th>Potencia (CV)</th>
+                        <th>0-100 km/h</th>
+                        <th>Velocidad Máxima</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="table-img-wrapper"><img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?q=80&w=150&auto=format&fit=crop" alt="Toro V12 SVJ"></div></td>
+                        <td class="model-name">Toro V12 SVJ</td>
+                        <td>V12 Atmosférico</td>
+                        <td class="highlight-spec">770</td>
+                        <td>2.8s</td>
+                        <td>351 km/h</td>
+                    </tr>
+                    <tr>
+                        <td><div class="table-img-wrapper"><img src="https://images.unsplash.com/photo-1706606016654-e699b9cf9c5f?q=80&w=150&auto=format&fit=crop" alt="Godzilla R35"></div></td>
+                        <td class="model-name">Godzilla R35</td>
+                        <td>V6 Twin-Turbo</td>
+                        <td class="highlight-spec">600</td>
+                        <td>2.7s</td>
+                        <td>315 km/h</td>
+                    </tr>
+                    <tr>
+                        <td><div class="table-img-wrapper"><img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=150&auto=format&fit=crop" alt="Phantom R8"></div></td>
+                        <td class="model-name">Phantom R8</td>
+                        <td>V10 FSI</td>
+                        <td class="highlight-spec">620</td>
+                        <td>3.1s</td>
+                        <td>331 km/h</td>
+                    </tr>
+                    <tr>
+                        <td><div class="table-img-wrapper"><img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=150&auto=format&fit=crop" alt="Aero 911"></div></td>
+                        <td class="model-name">Aero 911</td>
+                        <td>Flat-6 Twin-Turbo</td>
+                        <td class="highlight-spec">650</td>
+                        <td>2.7s</td>
+                        <td>330 km/h</td>
+                    </tr>
+                    <tr>
+                        <td><div class="table-img-wrapper"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=150&auto=format&fit=crop" alt="Vanguard C8"></div></td>
+                        <td class="model-name">Vanguard C8</td>
+                        <td>V8 Atmosférico</td>
+                        <td class="highlight-spec">495</td>
+                        <td>2.9s</td>
+                        <td>312 km/h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Apex Motors. Diseñado con pura potencia HTML y CSS.</p>
+    </footer>
+
+</body>
+</html>
