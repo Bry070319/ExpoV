@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasuke Uchiha | Ultimate Experience</title>
+
+    <link rel="stylesheet" href="menuestilokatya.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cursor Sharingan -->
+    <div id="sharinganCursor"></div>
+
+    <!-- Partículas -->
+    <div class="particles"></div>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            SASUKE UCHIHA
+        </div>
+
+        <ul>
+            <li><a href="#timeline">Evolución</a></li>
+            <li><a href="#biografia">Biografía</a></li>
+            <li><a href="#tecnicas">Técnicas</a></li>
+            <li><a href="#naruto">Naruto</a></li>
+            <li><a href="#curiosidades">Curiosidades</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="overlay"></div>
+
+        <img
+        class="hero-bg"
+        src="https://wallpapercave.com/wp/wp2552378.jpg"
+        alt="Sasuke Shippuden">
+
+        <div class="hero-content">
+
+            <span>UCHIHA • SHARINGAN • RINNEGAN</span>
+
+            <h1>
+                SASUKE
+                <br>
+                UCHIHA
+            </h1>
+
+            <p>
+                El último superviviente del Clan Uchiha,
+                un shinobi legendario que recorrió el camino
+                de la venganza, la redención y la protección.
+            </p>
+
+            <button id="activateSharingan">
+                ACTIVAR SHARINGAN
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+    <section class="stats">
+
+        <div class="stat-card">
+            <h2 id="power">0</h2>
+            <p>Nivel de Poder</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="speed">0</h2>
+            <p>Velocidad</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="iq">0</h2>
+            <p>Estrategia</p>
+        </div>
+
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="timeline">
+
+        <h2>Evolución de Sasuke</h2>
+
+        <div class="timeline-buttons">
+
+    <button
+    class="timeline-btn active"
+    onclick="showVersion('classic', this)">
+        Sasuke Clásico
+    </button>
+
+    <button
+    class="timeline-btn"
+    onclick="showVersion('shippuden', this)">
+        Shippuden
+    </button>
+
+    <button
+    class="timeline-btn"
+    onclick="showVersion('thelast', this)">
+        The Last
+    </button>
+
+</div>
+
+        <div class="version-card">
+
+            <img
+            id="versionImage"
+            src="https://i.pinimg.com/736x/0e/05/ac/0e05acb6803a955a916ab1515d5eff32.jpg"
+            alt="Sasuke">
+
+            <div>
+
+                <h3 id="versionTitle">
+                    Sasuke Clásico
+                </h3>
+
+                <p id="versionText">
+                    Un joven prodigio del Clan Uchiha,
+                    impulsado por el deseo de superar
+                    a su hermano Itachi.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BIOGRAFÍA -->
+    <section id="biografia" class="bio">
+
+        <h2>Biografía</h2>
+
+        <p>
+            Sasuke Uchiha nació dentro del prestigioso Clan Uchiha.
+            Después de presenciar la destrucción de su clan a manos
+            de su hermano mayor, Itachi, dedicó su vida a volverse
+            más fuerte. A lo largo de su viaje pasó de ser un joven
+            impulsado por la venganza a convertirse en uno de los
+            protectores más importantes del mundo shinobi.
+        </p>
+
+    </section>
+
+    <!-- TÉCNICAS -->
+    <section id="tecnicas" class="tecnicas">
+
+        <h2>Técnicas Legendarias</h2>
+
+        <div class="tech-grid">
+
+            <div class="tech-card">
+                <h3>⚡ Chidori</h3>
+                <p>Técnica creada por Kakashi Hatake.</p>
+            </div>
+
+            <div class="tech-card">
+                <h3>🔥 Amaterasu</h3>
+                <p>Llamas negras imposibles de apagar.</p>
+            </div>
+
+            <div class="tech-card">
+                <h3>🛡 Susanoo</h3>
+                <p>La defensa definitiva del Mangekyō Sharingan.</p>
+            </div>
+
+            <div class="tech-card">
+                <h3>⛈ Kirin</h3>
+                <p>Un rayo natural controlado por Sasuke.</p>
+            </div>
+
+            <div class="tech-card">
+                <h3>👁 Rinnegan</h3>
+                <p>Uno de los dōjutsu más poderosos.</p>
+            </div>
+
+            <div class="tech-card">
+                <h3>🐍 Invocación</h3>
+                <p>Aliados serpiente de gran poder.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- NARUTO -->
+    <section id="naruto" class="naruto-section">
+
+        <div class="naruto-card">
+
+            <img
+            src="https://th.bing.com/th/id/R.6ffbd42ff25fd1c7f852c81ef5dab22d?rik=%2fdDAs6Bykoqzrw&pid=ImgRaw&r=0"
+            alt="Naruto">
+
+            <div>
+
+                <h2>Naruto Uzumaki</h2>
+
+                <p>
+                    Más que un rival, Naruto fue la persona
+                    que nunca renunció a salvar a Sasuke.
+                    Juntos representan una de las amistades
+                    más icónicas de la historia del anime.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CURIOSIDADES -->
+    <section id="curiosidades" class="facts">
+
+        <h2>Curiosidades</h2>
+
+        <div class="fact">
+
+            <button class="fact-btn">
+                ¿Qué significa "Sasuke"?
+            </button>
+
+            <div class="fact-content">
+                Su nombre proviene de un legendario ninja japonés.
+            </div>
+
+        </div>
+
+        <div class="fact">
+
+            <button class="fact-btn">
+                ¿Cuál es su comida favorita?
+            </button>
+
+            <div class="fact-content">
+                Los tomates y el onigiri.
+            </div>
+
+        </div>
+
+        <div class="fact">
+
+            <button class="fact-btn">
+                ¿Quién fue su mayor inspiración?
+            </button>
+
+            <div class="fact-content">
+                Su hermano Itachi tuvo una enorme influencia
+                en toda su vida.
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FINAL -->
+    <section class="final-section">
+
+        <img
+        src="https://i.pinimg.com/736x/05/7e/81/057e81197b254612e1bc549335d96c10.jpg"
+        alt="Sasuke Adulto">
+
+        <div>
+
+            <h2>El Protector de las Sombras</h2>
+
+            <p>
+                Tras la Cuarta Gran Guerra Ninja, Sasuke
+                eligió proteger el mundo desde las sombras,
+                viajando constantemente para enfrentar amenazas
+                que podrían poner en peligro la paz.
+            </p>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <h2>SASUKE UCHIHA</h2>
+        <p>Ultimate Interactive Experience</p>
+    </footer>
+
+    <script src="menukatya.js"></script>
+
+</body>
+</html>
