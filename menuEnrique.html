@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FC Barcelona — Més que un club</title>
+<meta name="description" content="Historia, jugadores, títulos y pasión del FC Barcelona. Més que un club desde 1899." />
+<link rel="stylesheet" href="menuEstiloEnrique.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<header id="nav">
+  <nav class="container nav">
+    <a href="#top" class="logo">
+      <span class="logo-mark"></span>
+      <span>FC BARCELONA</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#historia">Historia</a></li>
+      <li><a href="#plantilla">Plantilla</a></li>
+      <li><a href="#titulos">Títulos</a></li>
+      <li><a href="#partidos">Partidos</a></li>
+    </ul>
+    <button id="menuBtn" class="menu-btn" aria-label="Menú">Menú</button>
+  </nav>
+  <ul id="mobileMenu" class="mobile-menu">
+    <li><a href="#historia">Historia</a></li>
+    <li><a href="#plantilla">Plantilla</a></li>
+    <li><a href="#titulos">Títulos</a></li>
+    <li><a href="#partidos">Partidos</a></li>
+  </ul>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="eyebrow">Desde 1899</p>
+    <h1>Més que <br><span class="gradient-text">un club.</span></h1>
+    <p class="lead">Historia, pasión y excelencia. El FC Barcelona representa la identidad de Cataluña y de millones de aficionados en todo el mundo.</p>
+    <div class="cta-row">
+      <a href="#historia" class="btn btn-primary">Descubrir el club</a>
+      <a href="#partidos" class="btn btn-ghost">Próximos partidos</a>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORIA -->
+<section id="historia" class="section">
+  <div class="container grid-2">
+    <div>
+      <p class="eyebrow">Historia</p>
+      <h2>125 años de leyenda</h2>
+      <p class="muted">Fundado el 29 de noviembre de 1899 por Joan Gamper, el FC Barcelona nació de la unión de aficionados al fútbol de distintas nacionalidades. Desde entonces, el club ha definido una identidad propia basada en el talento, la cantera y un estilo de juego inconfundible.</p>
+      <p class="muted">De Cruyff a Guardiola, de Kubala a Messi, La Masia ha forjado a generaciones de futbolistas que han llevado al Barça a lo más alto del fútbol mundial.</p>
+      <div class="stats">
+        <div><div class="stat-n">1899</div><div class="stat-l">Fundación</div></div>
+        <div><div class="stat-n">99K</div><div class="stat-l">Camp Nou</div></div>
+        <div><div class="stat-n">400M+</div><div class="stat-l">Aficionados</div></div>
+      </div>
+    </div>
+    <div class="image-frame">
+      <img src="https://4kwallpapers.com/images/wallpapers/fc-barcelona-lionel-3840x2160-17365.jpg" alt="Jugador en acción" />
+    </div>
+  </div>
+</section>
+
+<!-- PLANTILLA -->
+<section id="plantilla" class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Plantilla 2025/26</p>
+        <h2>Estrellas del Barça</h2>
+      </div>
+      <p class="muted max-md">Una mezcla de veteranos campeones y jóvenes talentos forjados en La Masia.</p>
+    </div>
+    <div class="players-grid" id="playersGrid"></div>
+  </div>
+</section>
+
+<!-- TÍTULOS -->
+<section id="titulos" class="section">
+  <div class="container grid-2">
+    <div class="image-frame">
+      <img src="https://estaticos.sport.es/resources/jpg/9/5/1513685552859.jpg" alt="Trofeos" />
+    </div>
+    <div>
+      <p class="eyebrow">Palmarés</p>
+      <h2>Un club de leyenda</h2>
+      <div class="trophies" id="trophiesGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTIDOS -->
+<section id="partidos" class="section section-alt">
+  <div class="container">
+    <p class="eyebrow">Próximos partidos</p>
+    <h2>Calendario</h2>
+    <div class="matches" id="matchesList"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-card">
+      <h2>Visca el Barça!</h2>
+      <p>Únete a los millones de culés alrededor del mundo y vive la pasión azulgrana.</p>
+      <a href="#top" class="btn btn-light">Hacerme socio</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer">
+    <div class="logo"><span class="logo-mark"></span><span>FC Barcelona © <span id="year"></span></span></div>
+    <p class="muted">Sitio de aficionados — no oficial.</p>
+  </div>
+</footer>
+
+<script src="menuEnrique.js"></script>
+</body>
+</html>
