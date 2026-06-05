@@ -1,0 +1,622 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --red:#ff1a1a;
+    --darkred:#8b0000;
+    --black:#050505;
+    --gray:#121212;
+    --light:#e8e8e8;
+}
+
+body{
+    background:
+    radial-gradient(circle at top,
+    #1a0000 0%,
+    #0b0b0b 45%,
+    #000000 100%);
+
+    color:var(--light);
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+   SHARINGAN CURSOR
+========================= */
+
+#sharinganCursor{
+    width:25px;
+    height:25px;
+
+    border:2px solid red;
+    border-radius:50%;
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    pointer-events:none;
+
+    z-index:99999;
+
+    transform:translate(-50%,-50%);
+
+    box-shadow:
+    0 0 10px red,
+    0 0 20px red;
+
+    transition:
+    width .2s,
+    height .2s,
+    box-shadow .2s;
+}
+
+/* =========================
+   PARTICULAS
+========================= */
+
+.particles{
+    position:fixed;
+    inset:0;
+
+    pointer-events:none;
+
+    background-image:
+    radial-gradient(circle,rgba(255,0,0,.15) 1px,transparent 1px);
+
+    background-size:60px 60px;
+
+    animation:particlesMove 25s linear infinite;
+}
+
+@keyframes particlesMove{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-300px);
+    }
+
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(255,0,0,.2);
+}
+
+.logo{
+    font-family:'Orbitron',sans-serif;
+    font-size:1.4rem;
+    font-weight:900;
+
+    color:white;
+
+    text-shadow:
+    0 0 10px red,
+    0 0 20px red;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+
+    transition:.3s;
+}
+
+nav a:hover{
+    color:red;
+
+    text-shadow:
+    0 0 10px red,
+    0 0 20px red;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    height:100vh;
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.hero-bg{
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    filter:brightness(.35);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.3),
+    rgba(0,0,0,.8));
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+
+    text-align:center;
+    max-width:900px;
+
+    padding:20px;
+}
+
+.hero-content span{
+    letter-spacing:4px;
+    color:#ff6b6b;
+}
+
+.hero-content h1{
+    font-family:'Orbitron',sans-serif;
+
+    font-size:7rem;
+
+    line-height:.9;
+
+    margin:20px 0;
+
+    text-shadow:
+    0 0 20px red,
+    0 0 40px red,
+    0 0 80px darkred;
+}
+
+.hero-content p{
+    max-width:700px;
+    margin:auto;
+
+    line-height:2;
+}
+
+#activateSharingan{
+    margin-top:30px;
+
+    padding:15px 35px;
+
+    border:none;
+    border-radius:50px;
+
+    background:red;
+    color:white;
+
+    font-weight:bold;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+#activateSharingan:hover{
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 20px red,
+    0 0 50px red;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    padding:100px 8%;
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.stat-card{
+    width:250px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,0,0,.15);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    text-align:center;
+}
+
+.stat-card h2{
+    font-size:3rem;
+    color:red;
+
+    text-shadow:0 0 15px red;
+}
+
+/* =========================
+   TITULOS
+========================= */
+
+section h2{
+    text-align:center;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:2.7rem;
+
+    margin-bottom:50px;
+
+    color:white;
+}
+
+section h2::after{
+    content:"";
+
+    display:block;
+
+    width:100px;
+    height:4px;
+
+    margin:15px auto;
+
+    border-radius:20px;
+
+    background:red;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+    padding:100px 8%;
+}
+
+.timeline-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+
+    margin-bottom:50px;
+}
+
+.timeline-btn{
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#1a1a1a;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.timeline-btn:hover,
+.timeline-btn.active{
+
+    background:red;
+
+    box-shadow:
+    0 0 15px red,
+    0 0 30px red;
+}
+
+.version-card{
+    max-width:1100px;
+
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    gap:40px;
+
+    flex-wrap:wrap;
+
+    background:rgba(255,255,255,.04);
+
+    padding:25px;
+
+    border-radius:30px;
+}
+
+.version-card img{
+    width:350px;
+    max-width:100%;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 20px rgba(255,0,0,.3);
+}
+
+.version-card h3{
+    color:red;
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+/* =========================
+   BIO
+========================= */
+
+.bio{
+    padding:100px 15%;
+    text-align:center;
+}
+
+.bio p{
+    line-height:2;
+    font-size:1.05rem;
+}
+
+/* =========================
+   TECNICAS
+========================= */
+
+.tecnicas{
+    padding:100px 8%;
+}
+
+.tech-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+}
+
+.tech-card{
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,0,0,.15);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    transition:.3s;
+}
+
+.tech-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 20px rgba(255,0,0,.4);
+}
+
+.tech-card h3{
+    color:red;
+    margin-bottom:15px;
+}
+
+/* =========================
+   NARUTO
+========================= */
+
+.naruto-section{
+    padding:100px 8%;
+}
+
+.naruto-card{
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    gap:40px;
+
+    flex-wrap:wrap;
+
+    background:rgba(255,255,255,.04);
+
+    border-radius:30px;
+
+    padding:25px;
+}
+
+.naruto-card img{
+    width:350px;
+    max-width:100%;
+
+    border-radius:20px;
+}
+
+.naruto-card p{
+    line-height:2;
+}
+
+/* =========================
+   CURIOSIDADES
+========================= */
+
+.facts{
+    padding:100px 8%;
+}
+
+.fact{
+    max-width:900px;
+    margin:20px auto;
+}
+
+.fact-btn{
+    width:100%;
+
+    text-align:left;
+
+    padding:20px;
+
+    border:none;
+
+    background:#121212;
+
+    color:white;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+.fact-btn:hover{
+    background:#1d1d1d;
+}
+
+.fact-content{
+    max-height:0;
+    overflow:hidden;
+
+    background:rgba(255,255,255,.04);
+
+    border-radius:0 0 15px 15px;
+
+    transition:.4s;
+
+    padding:0 20px;
+}
+
+.fact-content.open{
+    max-height:200px;
+    padding:20px;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final-section{
+    padding:100px 8%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+}
+
+.final-section img{
+    width:350px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 0 20px rgba(255,0,0,.3);
+}
+
+.final-section h2{
+    text-align:left;
+}
+
+.final-section h2::after{
+    margin-left:0;
+}
+
+.final-section p{
+    max-width:500px;
+    line-height:2;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    text-align:center;
+
+    padding:50px;
+
+    background:black;
+
+    border-top:
+    1px solid rgba(255,0,0,.2);
+}
+
+footer h2{
+    margin-bottom:10px;
+}
+
+footer h2::after{
+    display:none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:4rem;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+}
