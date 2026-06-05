@@ -1,0 +1,548 @@
+/* --- 1. RESETEO Y VARIABLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth; /* Hace que el salto entre secciones sea suave */
+}
+
+body {
+    background-color: #0b0b0b;
+    color: #f5f5f5;
+    line-height: 1.7;
+}
+
+/* --- 2. BARRA DE NAVEGACIÓN --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(11, 11, 11, 0.95);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #e62121;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #bbb;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e62121;
+}
+
+/* --- 3. SECCIÓN HERO (PORTADA) --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(11, 11, 11, 1)), 
+                url('https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 8%;
+    margin-top: 60px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-badge {
+    background-color: #e62121;
+    color: #fff;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+    letter-spacing: 1px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin: 15px 0 20px 0;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Botones universales */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #e62121;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #b81414;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: #0b0b0b;
+}
+
+/* --- 4. TÍTULOS DE SECCIÓN REUTILIZABLES --- */
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 20px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #888;
+    font-size: 16px;
+}
+
+/* --- 5. SECCIÓN CARACTERÍSTICAS --- */
+.features-section {
+    padding: 100px 8%;
+    background-color: #0f0f0f;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.feature-item {
+    background-color: #161616;
+    padding: 40px 30px;
+    border-radius: 6px;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    border-bottom-color: #e62121;
+}
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    color: #999;
+    font-size: 15px;
+}
+
+/* --- 6. SECCIÓN DE CATÁLOGO --- */
+.catalog-section {
+    padding: 100px 8%;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.car-card {
+    background-color: #161616;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-8px);
+}
+
+.car-img-container {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+}
+
+.car-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.car-card:hover img {
+    transform: scale(1.08);
+}
+
+.car-info {
+    padding: 25px;
+}
+
+.car-category {
+    color: #e62121;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.car-info h3 {
+    font-size: 22px;
+    margin: 5px 0 12px 0;
+}
+
+.car-info p {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 20px;
+    height: 44px; /* Mantiene alineadas las tarjetas */
+}
+
+.car-specs {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.btn-card {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #e62121;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.btn-card:hover {
+    background-color: #e62121;
+}
+
+/* --- 7. SECCIÓN NOSOTROS --- */
+.about-section {
+    padding: 100px 8%;
+    background-color: #0f0f0f;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.about-text, .about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-subtitle {
+    color: #e62121;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin: 10px 0 20px 0;
+    line-height: 1.2;
+}
+
+.about-text p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.about-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.stat-box h4 {
+    font-size: 32px;
+    color: #e62121;
+}
+
+.stat-box p {
+    font-size: 14px;
+    color: #777;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+/* --- 8. SECCIÓN TESTIMONIOS --- */
+.testimonials-section {
+    padding: 100px 8%;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: #161616;
+    padding: 30px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.review {
+    font-style: italic;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.user-info h5 {
+    font-size: 16px;
+    color: #fff;
+}
+
+.user-info span {
+    font-size: 12px;
+    color: #666;
+}
+
+/* --- 9. SECCIÓN DE CONTACTO --- */
+.contact-section {
+    padding: 100px 8%;
+    background-color: #0f0f0f;
+}
+
+.contact-container {
+    display: flex;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.contact-info, .contact-form-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    list-style: none;
+}
+
+.contact-details li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Formulario */
+.contact-form-container {
+    background-color: #161616;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 8px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #222;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #e62121;
+}
+
+.btn-block {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+}
+
+/* --- 10. PIE DE PÁGINA (FOOTER) --- */
+footer {
+    background-color: #070707;
+    padding: 60px 8% 20px 8%;
+    border-top: 1px solid #1c1c1c;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand {
+    max-width: 350px;
+}
+
+.footer-brand h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-brand h3 span {
+    color: #e62121;
+}
+
+.footer-brand p {
+    color: #777;
+    font-size: 14px;
+}
+
+.footer-links-grid {
+    display: flex;
+    gap: 80px;
+}
+
+.footer-links-grid h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links-grid ul {
+    list-style: none;
+}
+
+.footer-links-grid li {
+    margin-bottom: 10px;
+}
+
+.footer-links-grid a {
+    color: #777;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links-grid a:hover {
+    color: #e62121;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #111;
+    color: #555;
+    font-size: 13px;
+}
+
+/* --- 11. RESPONSIVE DESIGN (ADAPTACIÓN A MÓVILES) --- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 5%;
+    }
+    .nav-links {
+        display: none; /* Esconde los links en móviles para un diseño real, o podrías dejarlos fluir verticalmente */
+    }
+    .hero h1 {
+        font-size: 38px;
+    }
+    .about-container, .contact-container {
+        flex-direction: column;
+    }
+}
