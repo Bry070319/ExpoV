@@ -1,0 +1,265 @@
+/* ==========================================================================
+   Variables de Diseño y Paleta Editorial (Beige & Café)
+   ========================================================================== */
+:root {
+    --bg-color: #f7f4ed;        /* Beige museo limpio */
+    --text-primary: #2a1f1a;    /* Café oscuro casi negro para máxima legibilidad */
+    --text-secondary: #5c4e46;  /* Café tierra medio para descripciones */
+    --text-muted: #96867a;      /* Café arcilla suave para metadatos */
+    --accent-line: #e3ded5;     /* Línea estructural sutil */
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+/* ==========================================================================
+   Estilos Globales y Reseteo Moderno
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Encabezado Principal (Header)
+   ========================================================================== */
+.site-header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 40px 60px 40px;
+    text-align: center;
+}
+
+.header-badge {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.site-header h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+.site-header .subtitle {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Estructura de Contenedor y Secciones Hero
+   ========================================================================== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.hero-section {
+    margin-bottom: 100px;
+}
+
+.main-figure {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: sepia(18%) contrast(98%) brightness(97%);
+    transition: filter 0.5s ease;
+}
+
+figcaption {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 12px;
+    font-style: italic;
+    text-align: right;
+}
+
+.block-quote {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    line-height: 1.4;
+    text-align: center;
+    color: var(--text-secondary);
+    max-width: 850px;
+    margin: 80px auto;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   Diseño de Cuadrícula Editorial (Asymmetrical Layout)
+   ========================================================================== */
+.editorial-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 80px 0;
+    border-top: 1px solid var(--accent-line);
+}
+
+@media (min-width: 768px) {
+    .editorial-grid {
+        grid-template-columns: 3fr 7fr;
+        gap: 60px;
+    }
+}
+
+.grid-aside {
+    position: sticky;
+    top: 40px;
+    height: max-content;
+}
+
+.section-index {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.grid-aside h2 {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.grid-content p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.intro-text {
+    font-size: 1.2rem !important;
+    color: var(--text-primary) !important;
+    line-height: 1.6;
+    margin-bottom: 40px !important;
+}
+
+/* ==========================================================================
+   Sección Galería e Imágenes Secundarias
+   ========================================================================== */
+.gallery-section {
+    margin: 60px 0;
+}
+
+.gallery-figure {
+    width: 100%;
+}
+
+/* ==========================================================================
+   Módulo de Productos de Discografía
+   ========================================================================== */
+.release-item {
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--accent-line);
+}
+
+.release-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.release-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+@media (min-width: 480px) {
+    .release-header {
+        flex-direction: row;
+        align-items: baseline;
+    }
+}
+
+.release-year {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-right: 15px;
+}
+
+.release-item h3 {
+    font-family: var(--font-serif);
+    font-size: 1.45rem;
+    font-weight: 600;
+}
+
+.release-type {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.release-meta {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 15px !important;
+}
+
+/* ==========================================================================
+   Pie de Página (Footer)
+   ========================================================================== */
+.site-footer {
+    border-top: 1px solid var(--accent-line);
+    margin-top: 100px;
+    padding: 60px 40px;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .footer-inner {
+        flex-direction: row;
+    }
+}
+
+.footer-design {
+    text-align: right;
+}
