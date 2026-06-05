@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinfonía Digital | Blog de Música Interactivo</title>
+    <link rel="stylesheet" href="menuestiloVanessa.css">
+    <!-- Iconos FontAwesome para mayor dinamismo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ELEMENTOS FLOTANTES DE FONDO -->
+    <div class="particula-flotante" style="top: 20%; left: 10%; animation-delay: 0s;"><i class="fa-solid fa-music"></i></div>
+    <div class="particula-flotante" style="top: 40%; left: 85%; animation-delay: 2s;"><i class="fa-solid fa-compact-disc"></i></div>
+    <div class="particula-flotante" style="top: 70%; left: 15%; animation-delay: 4s;"><i class="fa-solid fa-sliders"></i></div>
+    <div class="particula-flotante" style="top: 85%; left: 75%; animation-delay: 1s;"><i class="fa-solid fa-guitar"></i></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <i class="fa-solid fa-wave-square"></i> SINFONÍA<span>DIGITAL</span>
+        </div>
+        <div class="nav-links">
+            <a href="#inicio"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="#trivia"><i class="fa-solid fa-gamepad"></i> Trivia</a>
+            <a href="#novedades"><i class="fa-solid fa-fire"></i> Novedades</a>
+            <a href="#generos"><i class="fa-solid fa-record-vinyl"></i> Géneros</a>
+            <a href="#comunidad"><i class="fa-solid fa-comments"></i> Comunidad</a>
+        </div>
+    </nav>
+
+    <!-- HEADER ATRACTIVO -->
+    <header id="inicio" class="hero-header">
+        <div class="hero-content">
+            <span class="badge">El Futuro del Sonido</span>
+            <h1>Siente el Ritmo de la <span class="text-neon">Evolución</span></h1>
+            <p>Explora las tendencias, domina la historia y pon a prueba tus oídos en el ecosistema musical más interactivo de la red.</p>
+            <div class="hero-buttons">
+                <a href="#trivia" class="btn btn-primary">Jugar Ahora <i class="fa-solid fa-play"></i></a>
+                <a href="#novedades" class="btn btn-secondary">Explorar Blog</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="ecualizador-animado">
+                <div class="barra"></div><div class="barra"></div><div class="barra"></div>
+                <div class="barra"></div><div class="barra"></div><div class="barra"></div>
+                <div class="barra"></div><div class="barra"></div><div class="barra"></div>
+            </div>
+            <div class="auriculares-glow">
+                <i class="fa-solid fa-headphones-simple"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- MINI JUEGO: TRIVIA MUSICAL -->
+        <section id="trivia" class="seccion">
+            <h2 class="titulo-seccion"><i class="fa-solid fa-dice"></i> Desafío de Ritmo: Match Musical</h2>
+            <p class="sub-seccion">Arrastra o selecciona la canción popular y emparéjala con su género correspondiente.</p>
+            
+            <div class="juego-container">
+                <div class="juego-columna">
+                    <h3>Canciones</h3>
+                    <div class="drop-item" draggable="true" data-match="rock">"Bohemian Rhapsody"</div>
+                    <div class="drop-item" draggable="true" data-match="pop">"Blinding Lights"</div>
+                    <div class="drop-item" draggable="true" data-match="electro">"One More Time"</div>
+                </div>
+                <div class="juego-columna">
+                    <h3>Géneros</h3>
+                    <div class="target-item" data-genre="pop">Pop Synth</div>
+                    <div class="target-item" data-genre="rock">Rock Clásico</div>
+                    <div class="target-item" data-genre="electro">Electronic / House</div>
+                </div>
+            </div>
+            <div id="juego-feedback" class="feedback-oculto"></div>
+        </section>
+
+        <!-- CAROUSEL DE TARJETAS DE MÚSICA (NOVEDADES) -->
+        <section id="novedades" class="seccion">
+            <h2 class="titulo-seccion"><i class="fa-solid fa-bolt"></i> Lanzamientos Destacados</h2>
+            
+            <div class="carousel-wrapper">
+                <button class="carousel-control prev" id="btn-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="carousel-container" id="carousel">
+                    
+                    <div class="card-musica active">
+                        <div class="card-img-sim" style="background: linear-gradient(135deg, #8a2387, #e94057);">
+                            <i class="fa-solid fa-compact-disc spin"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="tag-genero">Cyber-Pop</span>
+                            <h3>Neon Heartbeat</h3>
+                            <p>El nuevo álbum que redefine los sintetizadores retro con vocales futuristas.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-musica">
+                        <div class="card-img-sim" style="background: linear-gradient(135deg, #00b4db, #0083b0);">
+                            <i class="fa-solid fa-guitar"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="tag-genero">Indie Rock</span>
+                            <h3>Echoes of Dust</h3>
+                            <p>Guitarras crudas y una lírica profunda que evoca nostalgia pura.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-musica">
+                        <div class="card-img-sim" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+                            <i class="fa-solid fa-drum"></i>
+                        </div>
+                        <div class="card-body">
+                            <span class="tag-genero">Lo-Fi Beats</span>
+                            <h3>Midnight Coffee</h3>
+                            <p>Frecuencias perfectas para programar, relajarse o contemplar la lluvia.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control next" id="btn-next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- HISTORIA DE GÉNEROS (CARDS INTERACTIVAS) -->
+        <section id="generos" class="seccion">
+            <h2 class="titulo-seccion"><i class="fa-solid fa-monument"></i> Archivos del Tiempo Musical</h2>
+            <p class="sub-seccion">Haz clic en cada tarjeta para darles la vuelta y descubrir sus orígenes e historia secreta.</p>
+            
+            <div class="grid-generos">
+                
+                <!-- Card 1 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-rock">
+                            <i class="fa-solid fa-fire-flame-curved"></i>
+                            <h3>El Rock & Roll</h3>
+                            <span>Rebeldía y Amplificadores</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Años 50 & 60</h3>
+                            <p>Nacido de las raíces del Blues y el Country, el Rock rompió barreras sociales con ritmos acelerados y la emblemática guitarra eléctrica liderada por íconos revolucionarios.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-electro">
+                            <i class="fa-solid fa-bolt-lightning"></i>
+                            <h3>Música Electrónica</h3>
+                            <span>Sintetizadores y Beats</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Años 70 en adelante</h3>
+                            <p>Desde Kraftwerk hasta las raves de los 90. El uso de osciladores, cajas de ritmo y ordenadores transformó las pistas de baile en laboratorios de experimentación sonora digital.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front card-hiphop">
+                            <i class="fa-solid fa-microphone-lines"></i>
+                            <h3>Hip-Hop / Rap</h3>
+                            <span>Poesía y Poesía Urbana</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Años 70 (Bronx, NY)</h3>
+                            <p>Emergió de block parties donde los DJs aislaban los "breaks" de percusión. Se convirtió en un pilar cultural global que unifica el graffiti, el breakdance y la lírica de protesta.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- RESEÑAS Y COMENTARIOS -->
+        <section id="comunidad" class="seccion">
+            <h2 class="titulo-seccion"><i class="fa-solid fa-heart-pulse"></i> El Pulso de la Comunidad</h2>
+            
+            <div class="comunidad-container">
+                <div class="comentarios-feed" id="comentarios-box">
+                    
+                    <div class="comentario-card">
+                        <div class="user-avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+                        <div class="comentario-content">
+                            <h4>CyberBeat_99 <span>Hace 10 min</span></h4>
+                            <p class="review-track">Reseña sobre: <strong>Neon Heartbeat</strong></p>
+                            <p>"Los bajos del minuto 2:15 me hicieron flotar. Excelente producción de sintetizadores virtuales. ¡10/10!"</p>
+                        </div>
+                    </div>
+
+                    <div class="comentario-card">
+                        <div class="user-avatar"><i class="fa-solid fa-user-ninja"></i></div>
+                        <div class="comentario-content">
+                            <h4>Melomano_Retro <span>Hace 2 horas</span></h4>
+                            <p class="review-track">Reseña sobre: <strong>Bohemian Rhapsody</strong></p>
+                            <p>"No importa cuántas veces la escuche en los juegos de trivia, esa transición de balada a ópera sigue siendo insuperable."</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Formulario -->
+                <form id="form-comentario" class="form-comentario">
+                    <h3>Deja tu Reseña Crítica</h3>
+                    <div class="input-group">
+                        <input type="text" id="input-usuario" placeholder="Tu Alias / Nombre" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="input-cancion" placeholder="Canción o Álbum a reseñar" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="input-texto" rows="3" placeholder="¿Qué sensaciones te produjo la música?..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Transmitir Comentario <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Sinfonía Digital. Creado para mentes melómanas del nuevo milenio.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
