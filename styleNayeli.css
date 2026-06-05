@@ -1,0 +1,519 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-mar: #7bb4cf;
+    --azul-cielo: #e3f2fd;
+    --arena-calida: #fbf6f0;
+    --verde-menta: #aed5c5;
+    --coral-suave: #ff9e80;
+    --blanco-puro: #ffffff;
+    --texto-madera: #4a3e3d;
+    --texto-mutado: #7a6e6d;
+    --amarillo-nota: #fff9c4;
+    --rosa-nota: #f8bbd0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--texto-madera);
+    background-color: var(--arena-calida);
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px; /* Incrementado para dar más aire y longitud */
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(123, 180, 207, 0.1);
+}
+
+.navbar .logo {
+    font-family: 'Comfortaa', cursive;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--azul-mar);
+}
+
+.navbar .logo span {
+    color: var(--coral-suave);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--texto-madera);
+    font-weight: 700;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--azul-mar);
+}
+
+/* --- 1. HERO SECTION --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(251, 246, 240, 0.15), rgba(123, 180, 207, 0.45)), 
+                url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.88);
+    padding: 60px 40px;
+    border-radius: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+    backdrop-filter: blur(4px);
+    animation: bounceIn 1.2s ease;
+}
+
+.hero-content .tagline {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--azul-mar);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 52px;
+    color: var(--texto-madera);
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    color: var(--texto-mutated);
+}
+
+/* BOTONES */
+.btn-primary {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: var(--azul-mar);
+    color: var(--blanco-puro);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: 0 6px 20px rgba(123, 180, 207, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--coral-suave);
+    box-shadow: 0 6px 20px rgba(255, 158, 128, 0.4);
+    transform: translateY(-3px);
+}
+
+/* TÍTULOS DE SECCIÓN REUTILIZABLES */
+.section-title {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 38px;
+    color: var(--texto-madera);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--texto-mutado);
+    margin-bottom: 60px;
+    font-size: 16px;
+}
+
+/* --- 2. SINOPSIS SECTION --- */
+.sinopsis-section {
+    background-color: var(--blanco-puro);
+    border-radius: 60px 60px 0 0;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.sinopsis-img, .sinopsis-text {
+    flex: 1;
+}
+
+.sinopsis-img img {
+    width: 100%;
+    border-radius: 35px;
+    box-shadow: 0 20px 45px rgba(123, 180, 207, 0.2);
+}
+
+.sinopsis-text h2 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 34px;
+    color: var(--texto-madera);
+    margin-bottom: 15px;
+}
+
+.divider {
+    width: 90px;
+    height: 6px;
+    background-color: var(--verde-menta);
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.sinopsis-text p {
+    color: var(--texto-mutado);
+    margin-bottom: 25px;
+    font-size: 16.5px;
+}
+
+.quote {
+    font-size: 18px;
+    font-style: italic;
+    color: var(--azul-mar);
+    border-left: 5px solid var(--coral-suave);
+    padding-left: 20px;
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+/* --- 3. PERSONAJES SECTION --- */
+.personajes-section {
+    background-color: var(--azul-cielo);
+    /* Transición suave de color de fondo */
+    background: linear-gradient(180deg, var(--blanco-puro) 0%, var(--azul-cielo) 15%, var(--azul-cielo) 85%, var(--arena-calida) 100%);
+}
+
+.grid-personajes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+}
+
+.card {
+    background-color: var(--blanco-puro);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.02);
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(123, 180, 207, 0.25);
+}
+
+.card-img img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-body h3 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 21px;
+    color: var(--texto-madera);
+    margin-bottom: 5px;
+}
+
+.card-body .role {
+    font-size: 13px;
+    color: var(--azul-mar);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* --- 4. SECCIÓN LOCALES (Estructura de lista premium larga) --- */
+.locales-section {
+    background-color: var(--arena-calida);
+}
+
+.locales-list {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Gran separación para hacerla larga */
+    margin-top: 40px;
+}
+
+.local-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background-color: var(--blanco-puro);
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.local-item.inverse {
+    flex-direction: row-reverse;
+}
+
+.local-text, .local-img {
+    flex: 1;
+}
+
+.local-number {
+    font-family: 'Comfortaa', cursive;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--verde-menta);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.local-text h3 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 26px;
+    color: var(--texto-madera);
+    margin-bottom: 15px;
+}
+
+.local-text p {
+    color: var(--texto-mutado);
+    font-size: 16px;
+}
+
+.local-img img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* --- 5. SECCIÓN TABLÓN DE ANUNCIOS (Estilo Post-it) --- */
+.chismes-section {
+    background: linear-gradient(180deg, var(--arena-calida) 0%, var(--blanco-puro) 20%, var(--blanco-puro) 100%);
+}
+
+.tablon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.nota-pin {
+    padding: 35px 25px;
+    border-radius: 4px; /* Estilo papel */
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.06);
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.nota-pin:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.nota-pin:hover {
+    transform: translateY(-5px) rotate(0deg);
+}
+
+/* Colores de las notas */
+.nota-pin.rosa { background-color: var(--rosa-nota); }
+.nota-pin.azul { background-color: #c8e6c9; } /* Un verde clarito */
+.nota-pin.amarillo { background-color: var(--amarillo-nota); }
+.nota-pin.verde { background-color: #b3e5fc; } /* Un azul clarito */
+
+/* Pin simulado arriba */
+.nota-pin::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: var(--coral-suave);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.nota-pin h4 {
+    font-family: 'Comfortaa', cursive;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.nota-pin p {
+    font-size: 14.5px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.nota-pin .autor {
+    font-weight: 700;
+    font-size: 13px;
+    display: block;
+    text-align: right;
+}
+
+/* --- 6. POSTALES DE GONGJIN (Galería de 6 elementos) --- */
+.momentos-section {
+    background-color: var(--arena-calida);
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.galeria-item {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 280px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(74, 62, 61, 0.85));
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.overlay h5 {
+    color: var(--blanco-puro);
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.08);
+}
+
+.galeria-item:hover .overlay {
+    opacity: 1;
+}
+
+/* --- 7. PLAYLIST SECTION --- */
+.playlist-section {
+    background: linear-gradient(rgba(123, 180, 207, 0.4), rgba(123, 180, 207, 0.1)), var(--blanco-puro);
+    padding: 100px 20px;
+}
+
+.music-icon {
+    font-size: 50px;
+    display: block;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+.playlist-section h3 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.playlist-text {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--texto-mutado);
+    font-size: 16px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--texto-madera);
+    color: var(--arena-calida);
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 15px;
+}
+
+footer small {
+    display: block;
+    margin-top: 15px;
+    color: rgba(251, 246, 240, 0.5);
+}
+
+/* --- ANIMACIONES --- */
+@keyframes bounceIn {
+    0% { opacity: 0; transform: scale(0.96); }
+    70% { opacity: 0.9; transform: scale(1.01); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .navbar { padding: 20px; }
+    .nav-links { display: none; }
+    .hero-content { padding: 40px 20px; }
+    .hero-content h1 { font-size: 36px; }
+    .flex-container { flex-direction: column; gap: 40px; }
+    .local-item, .local-item.inverse { flex-direction: column; padding: 25px; gap: 25px; }
+    .container { padding: 70px 20px; }
+}
