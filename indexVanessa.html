@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freya | Café & Comunidad Vintage</title>
+    <link rel="stylesheet" href="styleVanessa.css">
+</head>
+<body>
+
+    <header id="inicio">
+        <h1>freya</h1>
+        <p>Café místico • Libros antiguos • Buena compañía</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#galeria">El Café</a>
+        <a href="#blog">Comunidad (Blog)</a>
+        <a href="#comentarios">Reseñas</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="galeria">
+            <h2 class="seccion-titulo">Nuestros Rincones Favoritos</h2>
+            <div class="galeria-grid">
+                
+                <div class="item-cafe">
+                    <div class="foto-vintage">[ Foto: Latte de Lavanda ]</div>
+                    <h3>Latte de Lavanda & Miel</h3>
+                    <p>Nuestra especialidad de la casa, servida en tazas de porcelana recuperadas de mercados de antigüedades.</p>
+                </div>
+
+                <div class="item-cafe">
+                    <div class="foto-vintage">[ Foto: El Sillón Verde ]</div>
+                    <h3>El Rincón del Lector</h3>
+                    <p>Un espacio junto a la ventana iluminada, rodeado de novelas clásicas y el aroma a grano recién molido.</p>
+                </div>
+
+                <div class="item-cafe">
+                    <div class="foto-vintage">[ Foto: Prensa Francesa ]</div>
+                    <h3>Métodos Artesanales</h3>
+                    <p>Creamos rituales matutinos a través de extracciones lentas pensadas para los verdaderos amantes del café.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <h2 class="seccion-titulo" id="blog">Crónicas de Freya</h2>
+        <div class="blog-grid">
+            
+            <div class="bloque-articulos">
+                
+                <article class="entrada-blog">
+                    <div class="meta">Publicado por Amélie • 04 de Junio, 2026</div>
+                    <h2>El arte de leer despacio (y con una taza al lado)</h2>
+                    <p>En un mundo que se mueve a mil por hora, en Freya decidimos bajar las revoluciones. Hoy hablamos de cómo los libros físicos y los granos de origen centroamericano comparten una misma virtud: necesitan tiempo para madurar, ser entendidos y, sobre todo, disfrutados plenamente...</p>
+                    <a href="#" class="leer-mas">Continuar leyendo →</a>
+                </article>
+
+                <article class="entrada-blog">
+                    <div class="meta">Publicado por Carlos • 28 de Mayo, 2026</div>
+                    <h2>Detrás del mostrador: La búsqueda del grano perfecto</h2>
+                    <p>Esta semana les contamos sobre nuestro viaje a las fincas locales de estricta altura. Queríamos un tostado medio que respetara las notas florales pero mantuviera esa densidad achocolatada que tanto les gusta sentir en los días lluviosos...</p>
+                    <a href="#" class="leer-mas">Continuar leyendo →</a>
+                </article>
+
+            </div>
+
+            <div class="sidebar">
+                <div class="entrada-blog lateral-info">
+                    <h3>La Comunidad</h3>
+                    <p class="txt-centro">Freya no es solo una cafetería, es un punto de encuentro para escritores, artistas y almas nostálgicas. ¡Trae tu libreta!</p>
+                    <hr class="linea-separadora">
+                    <p class="horario-titulo">Horario Rústico</p>
+                    <p class="txt-centro">Lun - Sáb: 7:30 - 20:00</p>
+                </div>
+            </div>
+
+        </div>
+
+        <section id="comentarios">
+            <h2 class="seccion-titulo">Lo que dice la mesa</h2>
+            <div class="comentarios-container">
+                
+                <div class="comentario-item">
+                    <div class="comentario-autor">Sofía Mendoza <span>Hace 2 días</span></div>
+                    <div class="comentario-texto">"El olor a madera y café te abraza apenas entras. El postre de cardamomo con un espresso es de otro planeta. Definitivamente mi lugar seguro de las tardes."</div>
+                </div>
+
+                <div class="comentario-item">
+                    <div class="comentario-autor">Julián R. <span>Hace una semana</span></div>
+                    <div class="comentario-texto">"Me encanta que no tengan música ruidosa, se puede escribir en paz. La estética vintage está cuidadísima, se siente como viajar a París en los años 50."</div>
+                </div>
+
+                <form class="comentario-form" action="#" method="POST" onsubmit="return false;">
+                    <h3>Déjanos tu nota en la bitácora</h3>
+                    <input type="text" placeholder="Tu nombre" required>
+                    <textarea rows="4" placeholder="Escribe tu experiencia aquí..." required></textarea>
+                    <button type="submit">Dejar Comentario</button>
+                </form>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Freya Café. Todos los derechos reservados.</p>
+        <p class="creditos">Hecho con amor, granos selectos y CSS puro.</p>
+    </footer>
+
+</body>
+</html>
