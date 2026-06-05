@@ -1,0 +1,628 @@
+/* Reset y Variables de Color Elegantes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Paleta inspirada en "20 Años" - Elegancia y sofisticación */
+    --color-black: #0a0a0a;
+    --color-charcoal: #1a1a1a;
+    --color-burgundy: #4a1c1c;
+    --color-burgundy-dark: #2d1212;
+    --color-gold: #c9a961;
+    --color-gold-light: #d4bc7b;
+    --color-gold-dark: #a89048;
+    --color-champagne: #f7f3e8;
+    --color-cream: #faf8f3;
+    --color-brown: #3d2817;
+    --gradient-elegant: linear-gradient(135deg, #1a1a1a 0%, #2d1212 50%, #1a1a1a 100%);
+    --gradient-gold: linear-gradient(135deg, #c9a961 0%, #f4e5c2 50%, #c9a961 100%);
+    --gradient-burgundy: linear-gradient(135deg, #4a1c1c 0%, #2d1212 100%);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header Elegante */
+header {
+    background: rgba(10, 10, 10, 0.98);
+    padding: 1.5rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-gold);
+    box-shadow: 0 5px 30px rgba(0,0,0,0.5);
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--color-gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+nav a {
+    color: var(--color-champagne);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--color-gold);
+    transition: width 0.4s ease;
+}
+
+nav a:hover {
+    color: var(--color-gold);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section - Estilo "20 Años" */
+.hero {
+    height: 100vh;
+    background: var(--gradient-elegant);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect fill="none" stroke="%23c9a961" stroke-width="0.5" opacity="0.1" x="0" y="0" width="100" height="100"/></svg>');
+    background-size: 50px 50px;
+    opacity: 0.3;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--color-champagne);
+    padding: 2rem;
+}
+
+.hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: var(--color-gold);
+}
+
+.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 7rem;
+    font-weight: 300;
+    letter-spacing: 15px;
+    margin-bottom: 1rem;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    margin-bottom: 3rem;
+    color: var(--color-gold-light);
+}
+
+.hero-line {
+    width: 100px;
+    height: 2px;
+    background: var(--gradient-gold);
+    margin: 0 auto 3rem;
+}
+
+.btn-elegant {
+    display: inline-block;
+    padding: 1rem 3.5rem;
+    background: transparent;
+    color: var(--color-gold);
+    text-decoration: none;
+    border: 1px solid var(--color-gold);
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-elegant::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-gold);
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.btn-elegant:hover {
+    color: var(--color-black);
+    border-color: var(--color-gold);
+}
+
+.btn-elegant:hover::before {
+    left: 0;
+}
+
+/* Secciones Generales */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--color-charcoal);
+    font-weight: 400;
+    letter-spacing: 8px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: var(--gradient-gold);
+    margin: 1.5rem auto 0;
+}
+
+/* Biografía */
+.biografia {
+    padding: 8rem 0;
+    background: var(--color-cream);
+}
+
+.bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.bio-text {
+    font-size: 1.05rem;
+    line-height: 2;
+    color: var(--color-brown);
+}
+
+.bio-text p {
+    margin-bottom: 1.8rem;
+    text-align: justify;
+}
+
+.drop-cap {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    float: left;
+    line-height: 0.8;
+    margin-right: 0.5rem;
+    margin-top: 0.3rem;
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+.elegant-text {
+    color: var(--color-burgundy);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.achievements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(201, 169, 97, 0.3);
+}
+
+.achievement-item {
+    text-align: center;
+}
+
+.achievement-number {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: var(--color-gold);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.achievement-label {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-brown);
+}
+
+.bio-image-wrapper {
+    position: relative;
+}
+
+.bio-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.image-border {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: -20px;
+    bottom: -20px;
+    border: 2px solid var(--color-gold);
+    z-index: -1;
+}
+
+/* Galería */
+.galeria {
+    padding: 8rem 0;
+    background: var(--gradient-elegant);
+}
+
+.galeria .section-title {
+    color: var(--color-champagne);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item.large {
+    grid-row: span 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+    filter: sepia(20%) contrast(90%);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: sepia(0%) contrast(100%);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 10, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--color-gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* Discografía */
+.discografia {
+    padding: 8rem 0;
+    background: var(--color-champagne);
+}
+
+.albums-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.album-featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    background: white;
+    padding: 3rem;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+}
+
+.album-featured img {
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.album-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: var(--color-charcoal);
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.album-year {
+    font-size: 1.1rem;
+    color: var(--color-gold);
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.album-description {
+    color: var(--color-brown);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.albums-grid-mini {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.album-card-mini {
+    background: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+}
+
+.album-card-mini:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.album-card-mini img {
+    width: 100%;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.album-card-mini h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--color-charcoal);
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.album-card-mini span {
+    color: var(--color-gold);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+/* Quote Section */
+.quote-section {
+    padding: 6rem 2rem;
+    background: var(--gradient-burgundy);
+    text-align: center;
+}
+
+.quote-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: var(--color-champagne);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.quote-line {
+    width: 60px;
+    height: 2px;
+    background: var(--color-gold);
+    margin: 0 auto 2rem;
+}
+
+.quote-author {
+    font-size: 1.1rem;
+    color: var(--color-gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* Footer */
+footer {
+    background: var(--color-black);
+    color: var(--color-champagne);
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+    border-top: 3px solid var(--color-gold);
+}
+
+.footer-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: var(--color-gold);
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    letter-spacing: 8px;
+}
+
+.footer-tagline {
+    font-size: 1rem;
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+    color: var(--color-gold-light);
+}
+
+.footer-line {
+    width: 100px;
+    height: 1px;
+    background: var(--color-gold);
+    margin: 0 auto 3rem;
+    opacity: 0.5;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.social-link {
+    color: var(--color-champagne);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+}
+
+.social-link:hover {
+    color: var(--color-gold);
+    border-color: var(--color-gold);
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: rgba(247, 243, 232, 0.5);
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    
+    .bio-grid,
+    .album-featured {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 250px);
+    }
+    
+    .gallery-item.large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    
+    .albums-grid-mini {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 3rem;
+        letter-spacing: 8px;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+        letter-spacing: 4px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 250px);
+    }
+    
+    .gallery-item.large {
+        grid-column: span 1;
+    }
+    
+    .achievements {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
