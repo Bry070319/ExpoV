@@ -1,0 +1,168 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Animación de fondo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(270deg, #0f0c29, #302b63, #24243e);
+    background-size: 600% 600%;
+    animation: fondo 20s ease infinite;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+@keyframes fondo {
+    0% {background-position:0% 50%}
+    50% {background-position:100% 50%}
+    100% {background-position:0% 50%}
+}
+
+/* Navegación */
+nav {
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    animation: logoPulse 2s infinite;
+}
+
+@keyframes logoPulse {
+    0% {color:#ffd700;}
+    50% {color:#66fcf1;}
+    100% {color:#ffd700;}
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Encabezado */
+header {
+    background: url('https://assets.ejecentral.com.mx/dims4/default/3030794/2147483647/strip/true/crop/1280x740+0+0/resize/1440x833!/quality/90/?url=https:%2F%2Fk3-prod-ejecentral.s3.us-west-2.amazonaws.com%2Fbrightspot%2Fe5%2Fdd%2Fe6d0748a1d274623cb6e64368cfa%2Fquien-es-alvaro-diaz.jpg') no-repeat center center/cover;
+    height: 70vh;
+    position: relative;
+}
+
+header .overlay {
+    background-color: rgba(0,0,0,0.7);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    animation: fadeIn 3s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 8px #000;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+
+/* Secciones */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.card {
+    background-color: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    background-color: rgba(255,255,255,0.1);
+}
+
+h2 {
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+/* Galería */
+.galeria .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05) rotate(2deg);
+    filter: brightness(1.2);
+}
+
+/* Timeline */
+.timeline {
+    margin-top: 2rem;
+    position: relative;
+}
+
+.timeline .line {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+.timeline .event {
+    background-color: rgba(255,255,255,0.05);
+    padding: 1rem;
+    border-left: 4px solid #ffd700;
+    animation: slideIn 2s ease;
+}
+
+.timeline .event span {
+    font-weight: bold;
+    color: #66fcf1;}
