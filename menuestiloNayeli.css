@@ -1,0 +1,201 @@
+/* --- CONFIGURACIONES ELEGANTES --- */
+:root {
+    --bg-dark: #0b0a0a;
+    --bg-card: #141312;
+    --gold-brand: #d4af37;
+    --gold-dim: #bba263;
+    --red-john: #9e1b1b;
+    --text-white: #f5f4f0;
+    --text-muted: #8e8c84;
+    --sans: 'Plus Jakarta Sans', sans-serif;
+    --serif: 'Playfair Display', serif;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: var(--sans);
+    overflow-x: hidden;
+}
+
+/* --- LOADER GIGANTE --- */
+#loader {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: #000; z-index: 99999; display: flex; justify-content: center; align-items: center;
+    transition: opacity 0.8s ease, visibility 0.8s;
+}
+.loader-wrap { text-align: center; }
+.glance-text { font-family: 'Cinzel', serif; font-size: 2rem; color: var(--gold-brand); letter-spacing: 4px; margin-bottom: 20px; }
+.line-loader { width: 200px; height: 2px; background: #222; margin: 0 auto 15px; position: relative; overflow: hidden; }
+.line-loader::after { content: ''; position: absolute; left: -50%; width: 50%; height: 100%; background: var(--gold-brand); animation: shift-load 1.5s infinite ease-in-out; }
+@keyframes shift-load { 0% { left: -50%; } 100% { left: 100%; } }
+
+/* --- BARRA DE NAVEGACIÓN PREMIUM --- */
+.navbar {
+    position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between;
+    align-items: center; padding: 35px 80px; z-index: 1000; transition: all 0.5s ease;
+}
+.navbar.scrolled {
+    background: rgba(11, 10, 10, 0.96); padding: 20px 80px; border-bottom: 1px solid #1c1a19; backdrop-filter: blur(12px);
+}
+.logo { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 2px; font-size: 1.2rem; }
+.nav-links { display: flex; list-style: none; gap: 40px; }
+.nav-links a {
+    color: var(--text-muted); text-decoration: none; font-size: 0.8rem; text-transform: uppercase;
+    letter-spacing: 2px; transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--gold-brand); }
+
+/* --- ESTRUCTURA GENERAL DE CABECERAS --- */
+.container { max-width: 1200px; margin: 0 auto; width: 100%; }
+.sec-header { margin-bottom: 80px; }
+.sec-header .num { font-size: 0.8rem; font-weight: bold; color: var(--gold-brand); letter-spacing: 4px; display: block; margin-bottom: 15px; }
+.sec-header h2 { font-family: var(--serif); font-size: 3.5rem; font-weight: 400; color: #fff; line-height: 1.1; }
+.sec-header p { color: var(--text-muted); font-size: 1.1rem; margin-top: 15px; max-width: 600px; line-height: 1.6; }
+.sec-header.centered { text-align: center; }
+.sec-header.centered p { margin: 15px auto 0; }
+
+/* --- HERO SECTION --- */
+.hero-section {
+    height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+    position: relative; text-align: center; padding: 0 20px;
+}
+.hero-bg {
+    position: absolute; top:0; left:0; width:100%; height:100%;
+    background: radial-gradient(circle at center, rgba(30,28,26,0.4) 0%, rgba(11,10,10,1) 85%);
+    z-index: 1;
+}
+.hero-content { z-index: 2; max-width: 900px; }
+.hero-content .sub { font-size: 0.85rem; letter-spacing: 6px; color: var(--text-muted); display: block; margin-bottom: 20px; }
+.hero-content .main-title { font-family: 'Cinzel', serif; font-size: 6.5rem; line-height: 1; letter-spacing: -1px; margin-bottom: 25px; font-weight: 400; }
+.hero-content .quote { font-family: var(--serif); font-style: italic; color: var(--gold-dim); font-size: 1.4rem; margin-bottom: 50px; }
+
+.btn-group { display: flex; gap: 20px; justify-content: center; }
+.btn-luxury {
+    padding: 16px 36px; background: var(--gold-brand); color: #000; text-decoration: none;
+    font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; border-radius: 2px;
+    transition: all 0.4s ease; border: 1px solid var(--gold-brand);
+}
+.btn-luxury:hover { background: transparent; color: var(--gold-brand); box-shadow: 0 0 30px rgba(212,175,55,0.2); }
+.btn-ghost {
+    padding: 16px 36px; background: transparent; color: #fff; text-decoration: none;
+    font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;
+    border: 1px solid #333; transition: 0.3s;
+}
+.btn-ghost:hover { border-color: #fff; }
+.scroll-down { position: absolute; bottom: 40px; font-size: 0.75rem; color: #444; letter-spacing: 3px; text-transform: uppercase; z-index: 2; }
+.scroll-down span { display: block; margin-top: 5px; animation: bounce 2s infinite; }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+
+/* --- SECCIÓN 1: ANATOMÍA (ESCÁNER MENTAL) --- */
+.section-anatomy { padding: 160px 20px; background: #0f0e0e; }
+.anatomy-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center; margin-top: 60px; }
+.anatomy-visual {
+    height: 550px; background: rgba(25, 23, 22, 0.6); border: 1px solid #242220;
+    position: relative; border-radius: 8px; overflow: hidden;
+}
+.scanner-line {
+    position: absolute; width: 100%; height: 2px; background: linear-gradient(90deg, transparent, var(--gold-brand), transparent);
+    top: 0; animation: scan-move 4s infinite linear;
+}
+@keyframes scan-move { 0% { top: 0%; } 50% { top: 100%; } 100% { top: 0%; } }
+
+.target-point {
+    position: absolute; width: 20px; height: 20px; border: 2px solid var(--gold-brand);
+    background: rgba(0,0,0,0.5); border-radius: 50%; cursor: pointer; transform: translate(-50%, -50%);
+    transition: all 0.3s; z-index: 5;
+}
+.target-point::after { content: ''; position: absolute; width: 100%; height: 100%; border: 1px solid var(--gold-brand); border-radius: 50%; animation: pulse-ring 1.5s infinite; }
+@keyframes pulse-ring { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
+.target-point:hover { background: var(--gold-brand); scale: 1.2; }
+
+.anatomy-info { background: var(--bg-card); padding: 50px; border-radius: 6px; border: 1px solid #1f1d1b; min-height: 250px; display: flex; flex-direction: column; justify-content: center; }
+.anatomy-info h3 { font-family: var(--serif); font-size: 1.8rem; margin-bottom: 20px; color: var(--gold-brand); }
+#analysis-box { font-size: 1.1rem; line-height: 1.7; color: var(--text-white); transition: opacity 0.3s ease; }
+
+/* --- SECCIÓN 2: TARJETAS DEL EQUIPO --- */
+.section-team { padding: 160px 20px; }
+.team-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.team-card {
+    background: var(--bg-card); padding: 50px 40px; border: 1px solid #1c1a19; border-radius: 4px;
+    transition: all 0.4s ease; position: relative;
+}
+.team-card:hover { border-color: var(--gold-brand); transform: translateY(-5px); }
+.card-num { font-family: var(--serif); font-size: 3rem; color: rgba(214,175,55,0.1); position: absolute; top: 30px; right: 40px; }
+.team-card h3 { font-family: var(--serif); font-size: 1.8rem; margin-bottom: 5px; }
+.team-card .role { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-dim); display: block; margin-bottom: 25px; }
+.team-card p { color: var(--text-muted); line-height: 1.7; font-size: 1rem; }
+
+/* --- SECCIÓN 3: EL MURO DE RED JOHN --- */
+.section-board { padding: 160px 20px; background: #050505; position: relative; }
+.evidence-wall {
+    height: 600px; background: url('https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1200&q=80') center center/cover;
+    border-radius: 12px; position: relative; border: 1px solid #221113; overflow: hidden; margin-top: 60px;
+}
+.evidence-wall::before { content: ''; position: absolute; width: 100%; height: 100%; background: rgba(10, 5, 5, 0.88); }
+.clue-tag {
+    position: absolute; padding: 10px 20px; background: #9e1b1b; color: white; font-size: 0.8rem;
+    font-weight: bold; letter-spacing: 1px; text-transform: uppercase; border-radius: 3px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); z-index: 2; border-left: 3px solid #ff5555;
+}
+.suspect-list {
+    position: absolute; right: 80px; top: 50%; transform: translateY(-50%);
+    width: 400px; z-index: 2; display: flex; flex-direction: column; gap: 15px;
+}
+.suspect-item {
+    background: rgba(20,20,20,0.85); padding: 20px; border-radius: 4px; border: 1px solid #331518;
+    font-size: 1rem; color: #ccc; transition: 0.3s;
+}
+.suspect-item span { color: white; font-weight: bold; font-family: var(--serif); }
+.suspect-item:hover { border-color: var(--red-john); background: rgba(158,27,27,0.15); transform: translateX(-5px); }
+
+/* --- SECCIÓN 4: CASOS (REVISTA LUXURY) --- */
+.section-cases { padding: 160px 20px; background: #0f0e0e; }
+.case-row { display: flex; gap: 80px; align-items: center; margin-bottom: 120px; }
+.case-row.reverse { flex-direction: row-reverse; }
+.case-meta { flex: 1; }
+.case-meta h4 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 3px; color: var(--gold-brand); margin-bottom: 15px; }
+.case-meta h3 { font-family: var(--serif); font-size: 2.8rem; font-weight: 400; margin-bottom: 25px; }
+.case-meta p { color: var(--text-muted); line-height: 1.8; font-size: 1.1rem; }
+.case-img { flex: 1.2; height: 450px; background-size: cover; background-position: center; border-radius: 6px; filter: grayscale(40%); border: 1px solid #222; }
+
+/* --- SECCIÓN 5: EL EXPERIMENTO INTERACTIVO --- */
+.section-game { padding: 160px 20px; display: flex; justify-content: center; }
+.game-box {
+    max-width: 800px; width: 100%; background: var(--bg-card); border-radius: 12px;
+    border: 1px solid #242220; padding: 80px 50px; text-align: center; position: relative;
+}
+.smiley-red {
+    width: 60px; height: 60px; border: 3px dashed var(--red-john); border-radius: 50%;
+    margin: 0 auto 30px; animation: rotate-smile 20s infinite linear;
+}
+@keyframes rotate-smile { 100% { transform: rotate(360deg); } }
+
+.game-box h2 { font-family: var(--serif); font-size: 3rem; margin-bottom: 20px; }
+.game-intro { font-size: 1.2rem; color: var(--text-muted); max-width: 550px; margin: 0 auto 40px; line-height: 1.6; }
+.game-interface { min-height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+.scanning-text { font-style: italic; color: var(--gold-brand); letter-spacing: 1px; }
+.progress-bar { width: 300px; height: 3px; background: #222; margin-top: 20px; border-radius: 2px; overflow: hidden; }
+.progress-fill { width: 0%; height: 100%; background: var(--gold-brand); }
+
+.number-reveal { font-family: var(--serif); font-size: 6rem; color: var(--gold-brand); font-weight: bold; margin: 20px 0; line-height: 1; }
+.psych-explanation { color: var(--text-muted); font-size: 1rem; line-height: 1.6; max-width: 600px; border-top: 1px solid #222; padding-top: 20px; }
+
+/* --- FOOTER --- */
+footer { padding: 80px 20px; background: #050505; border-top: 1px solid #141312; }
+.footer-wrap { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.footer-logo { font-family: 'Cinzel', serif; font-size: 1.1rem; letter-spacing: 2px; color: var(--text-muted); }
+footer p { color: #444; font-size: 0.85rem; }
+
+@media (max-width: 992px) {
+    .anatomy-grid, .case-row, .case-row.reverse { grid-template-columns: 1fr; flex-direction: column; gap: 40px; }
+    .suspect-list { position: relative; right: auto; top: auto; transform: none; width: 100%; padding: 30px; }
+    .navbar { padding: 20px 40px; }
+    .hero-content .main-title { font-size: 4rem; }
+}
