@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE MENTALIST // LA EXPERIENCIA PSICOLÓGICA</title>
+    <link rel="stylesheet" href="menuestiloNayeli.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Pantalla de Carga Interactiva -->
+    <div id="loader">
+        <div class="loader-wrap">
+            <h2 class="glance-text">MIRAS, PERO NO OBSERVAS</h2>
+            <div class="line-loader"></div>
+            <p>Sincronizando palacio mental...</p>
+        </div>
+    </div>
+
+    <!-- Menú de Navegación Fijo -->
+    <nav class="navbar">
+        <div class="logo">JANE // 通信</div>
+        <ul class="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#anatomy">Anatomía</a></li>
+            <li><a href="#board">Evidencias</a></li>
+            <li><a href="#cases">Casos</a></li>
+            <li><a href="#game">El Test</a></li>
+        </ul>
+    </nav>
+
+    <!-- INTRO/HERO DE MÁXIMO IMPACTO -->
+    <header id="home" class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <span class="sub">ARCHIVO CLASIFICADO CBI</span>
+            <h1 class="main-title">EL MENTALISTA</h1>
+            <p class="quote">"Todo el mundo miente. Excepto sus ojos."</p>
+            <div class="btn-group">
+                <a href="#anatomy" class="btn-luxury">Iniciar Observación</a>
+                <a href="#game" class="btn-ghost">Desafiar a Jane</a>
+            </div>
+        </div>
+        <div class="scroll-down">Desliza para descender al subconsciente <span>↓</span></div>
+    </header>
+
+    <!-- SECCIÓN 1: ANATOMÍA DE LA MENTIRA (Interactiva) -->
+    <section id="anatomy" class="section-anatomy">
+        <div class="container">
+            <div class="sec-header">
+                <span class="num">01 / PSICOLOGÍA</span>
+                <h2>La Anatomía de una Mentira</h2>
+                <p>Pasa el cursor sobre los puntos calientes del sospechoso para descifrar lo que su cuerpo intenta ocultar.</p>
+            </div>
+
+            <div class="anatomy-grid">
+                <div class="anatomy-visual">
+                    <!-- Silueta abstracta o punto de mira -->
+                    <div class="target-point" style="top: 25%; left: 50%;" data-tip="Los Ojos: Mirar arriba a la derecha indica construcción visual (fabricación de una mentira), no recuerdo real."></div>
+                    <div class="target-point" style="top: 45%; left: 45%;" data-tip="El Cuello: Un toque involuntario en la carótida demuestra una súbita subida de adrenalina por miedo a ser atrapado."></div>
+                    <div class="target-point" style="top: 70%; left: 35%;" data-tip="Las Manos: Palmas ocultas o micro-temblores en los dedos revelan deshonestidad activa y autoprotección."></div>
+                    <div class="target-point" style="top: 85%; left: 52%;" data-tip="La Postura: Pies apuntando hacia la salida indican que el sospechoso desea desesperadamente huir de la pregunta."></div>
+                    <div class="scanner-line"></div>
+                </div>
+                <div class="anatomy-info">
+                    <h3>Análisis en Tiempo Real:</h3>
+                    <div id="analysis-box">Pasa el cursor sobre uno de los puntos interactivos de la silueta...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: EL BANQUILLO DE SOSPECHOSOS (Tarjetas Gigantes con Scroll horizontal simulado) -->
+    <section class="section-team">
+        <div class="container">
+            <div class="sec-header">
+                <span class="num">02 / LA UNIDAD</span>
+                <h2>El Equipo del CBI</h2>
+                <p>Las mentes encargadas de ejecutar los caóticos pero brillantes planes de Patrick Jane.</p>
+            </div>
+            <div class="team-cards">
+                <div class="team-card">
+                    <div class="card-num">01</div>
+                    <h3>Teresa Lisbon</h3>
+                    <span class="role">Líder de Unidad</span>
+                    <p>La brújula moral. Encargada de seguir las reglas mientras protege a Jane de romperlas (y de sí mismo).</p>
+                </div>
+                <div class="team-card">
+                    <div class="card-num">02</div>
+                    <h3>Kimball Cho</h3>
+                    <span class="role">Agente Especial</span>
+                    <p>Impasible, directo, letal. No le importan los trucos mentales, solo los hechos y los interrogatorios fríos.</p>
+                </div>
+                <div class="team-card">
+                    <div class="card-num">03</div>
+                    <h3>Wayne Rigsby</h3>
+                    <span class="role">Especialista en Incendios</span>
+                    <p>Fuerza física y lealtad inquebrantable. Frecuentemente el cebo involuntario en los teatros psicológicos de Jane.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: EL TABLÓN DE EVIDENCIAS DE RED JOHN (¡Súper Interesante!) -->
+    <section id="board" class="section-board">
+        <div class="board-overlay"></div>
+        <div class="container">
+            <div class="sec-header centered">
+                <span class="num" style="color: #ff3344;">03 / OBSESIÓN</span>
+                <h2 style="color: #fff;">El Tablón de John el Rojo</h2>
+                <p style="color: #888;">La lista original de los 7 sospechosos que compartían las mismas pistas que el asesino.</p>
+            </div>
+
+            <div class="evidence-wall">
+                <div class="clue-tag" style="top: 15%; left: 10%;">Pista #1: Asociación Blake</div>
+                <div class="clue-tag" style="top: 40%; left: 75%;">Pista #2: Tatuaje de Tres Puntos</div>
+                <div class="clue-tag" style="top: 70%; left: 20%;">Pista #3: El Poema de William Blake</div>
+                
+                <div class="suspect-list">
+                    <div class="suspect-item"><span>Gale Bertram</span> — Director del CBI</div>
+                    <div class="suspect-item"><span>Bret Stiles</span> — Líder del Culto Visualiza</div>
+                    <div class="suspect-item"><span>Reede Smith</span> — Agente del FBI</div>
+                    <div class="suspect-item"><span>Thomas McAllister</span> — Alguacil del Condado</div>
+                    <div class="suspect-item"><span>Bob Kirkland</span> — Agente de Seguridad Nacional</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: CASOS EMBLEMÁTICOS (Estilo Revista de Lujo) -->
+    <section id="cases" class="section-cases">
+        <div class="container">
+            <div class="sec-header">
+                <span class="num">04 / ARCHIVOS</span>
+                <h2>Casos de Estudio Magistrales</h2>
+            </div>
+
+            <div class="case-row">
+                <div class="case-meta">
+                    <h4>Temporada 3 // Final</h4>
+                    <h3>Brink of Red</h3>
+                    <p>Jane se sienta en un centro comercial frente al hombre que afirma ser John el Rojo. Un duelo de palabras calmado que termina con un disparo a sangre fría en público.</p>
+                </div>
+                <div class="case-img" style="background-image: url('https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&w=700&q=80');"></div>
+            </div>
+
+            <div class="case-row reverse">
+                <div class="case-meta">
+                    <h4>Temporada 6 // Clímax</h4>
+                    <h3>El Final del Poema</h3>
+                    <p>En una iglesia vacía, sin trucos, sin jurados. Patrick Jane finalmente acorrala al verdadero monstruo cara a cara para cumplir su promesa de hace diez años.</p>
+                </div>
+                <div class="case-img" style="background-image: url('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=700&q=80');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: EL EXPERIMENTO INTERACTIVO DE LECTURA DE MENTE -->
+    <section id="game" class="section-game">
+        <div class="game-box">
+            <div class="smiley-red"></div>
+            <h2>El Palacio Mental de Jane</h2>
+            <p class="game-intro">Voy a probar que tus elecciones son predecibles. Piensa en un número del **1 al 10**. No me lo digas. Solo manténlo en tu mente con fuerza.</p>
+            
+            <div class="game-interface">
+                <button class="btn-luxury" onclick="startReading()">Lo tengo en mi mente</button>
+                <div id="game-status" class="hidden">
+                    <p class="scanning-text">Midiendo los milisegundos de tu interacción...</p>
+                    <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <div id="game-result" class="hidden">
+                    <h3>Tu cerebro eligió el número...</h3>
+                    <div class="number-reveal">7</div>
+                    <p class="psych-explanation">El 7 es el "número de la suerte psicológico". En un espectro del 1 al 10, el cerebro humano descarta los extremos (1, 10), los pares por ser demasiado simétricos, y el 5 por ser el centro exacto. Fuiste condicionado antes de dar clic.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-logo">THE MENTALIST</div>
+            <p>Diseño de Alta Fidelidad. Dedicado a los amantes del misterio analítico. 2026.</p>
+        </div>
+    </footer>
+
+    <script src="menuNayeli.js"></script>
+</body>
+</html>
